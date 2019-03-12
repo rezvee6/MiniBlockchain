@@ -17,7 +17,8 @@ class Block:
         sha.update(str(self.index) + str(self.timestamp) + str(self.date) + str(self.previousHash))
         return sha.hexdigest()
 
-    ## Create the genesis block ##
-    def createGenesisBlock():
-        """ Manually create the genesis block"""
-        return block(0,date.datetime.now(),"First Ever block","0")
+
+## Create the genesis block ##
+def createGenesisBlock():
+    """ Manually create the genesis block"""
+    return block(0,date.datetime.now(),"First Ever block","0")
