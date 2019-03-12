@@ -14,7 +14,7 @@ class Block:
     def hashBlock(self):
         """ Definition of a block, with hashes of its data"""
         sha = hasher.sha256()
-        sha.update(str(self.index) + str(self.timestamp) + str(self.data) + str(self.previousHash))
+        sha.update(str(self.index).encode('utf-8') + str(self.timestamp).encode('utf-8') + str(self.data).encode('utf-8') + str(self.previousHash).encode('utf-8'))
         return sha.hexdigest()
 
 
