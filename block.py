@@ -27,7 +27,7 @@ def createGenesisBlock():
 def nextBlock(previousBlock):
     this_index = previousBlock.index + 1
     this_timestamp = date.datetime.now()
-    this_data = ("Hi!, I'm block"+str(this_index))
+    this_data = ("Hi!, I'm block "+str(this_index))
     this_hash = previousBlock.hash
     return Block(this_index, this_timestamp, this_data, this_hash)
 
@@ -42,4 +42,5 @@ for i in range(initBlocks):
     blockchain.append(addBlock)
     previousBlock = addBlock
     print("Block #{0} has been added to the blockchain".format(addBlock.index))
+    print("Block data: {0}\n".format(addBlock.data))
     print("Hash: {0}".format(addBlock.hash))
